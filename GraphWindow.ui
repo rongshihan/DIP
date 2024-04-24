@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>776</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>选择参照图片</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/1.svg</normaloff>icon/1.svg</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {  
+        color: rgb(85,85,85); /* 设置标签文本颜色 */ 
+        font:12px \&quot;Microsoft YaHei\&quot;; 
+        font-weight:bold; 
+    }</string>
+       </property>
+       <property name="text">
+        <string>请拖拽参照图片到此处：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CustomGraphicsView" name="graphicsView">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(89, 217, 212, 50);
+border-radius: 20px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: rgba(47, 125, 238, 90);
+        border-radius:3px; 
+        min-height:30px; 
+        min-width:60px; 
+        font:13px \&quot;Microsoft YaHei\&quot;;
+    }
+QPushButton:hover {
+        background-color:rgba(85, 255, 255, 50);
+    }
+QPushButton:pressed {
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+    }</string>
+         </property>
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: rgba(47, 125, 238, 90);
+        border-radius:3px; 
+        min-height:30px; 
+        min-width:60px; 
+        font:13px \&quot;Microsoft YaHei\&quot;;
+    }
+QPushButton:hover {
+        background-color:rgba(85, 255, 255, 50);
+    }
+QPushButton:pressed {
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+    }</string>
+         </property>
+         <property name="text">
+          <string>取消</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>CustomGraphicsView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>747</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>739</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>615</x>
+     <y>745</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>723</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

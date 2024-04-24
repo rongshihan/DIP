@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数字图像处理软件</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/1.svg</normaloff>icon/1.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+	background-color: rgb(0, 0, 0, 50);
+    border-radius: 20px;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>12</number>
+       </property>
+       <property name="topMargin">
+        <number>12</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+    border-radius: 20px;
+	background-color: rgb(255, 255, 255, 150);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,6">
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="styleSheet">
+             <string notr="true">QFrame{
+	image: url(:/img/icon/hias.png);
+    background-color: rgb(47, 125, 238);
+    border-radius: 20px;color: rgb(89, 217, 212);
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+  outline:none;
+}
+QListView{
+  padding-top:24px;
+  border-radius:20px;
+  color:rgb(106,106,106);
+
+}
+QListView::item{
+  background-color:transparent;
+  height:40px;
+  padding-left:12px;
+  padding:12px;
+
+}
+QListView::item:hover{
+  background-color:rgba(216,216,216,50);
+
+}
+QListView::item:selected{
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+  border-left:2px solid rgb(90,216,212);
+
+}</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>直方图</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/histogram.png</normaloff>icon/histogram.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>直方图均衡化</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/average.png</normaloff>icon/average.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>自适应直方图均衡化</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/average.png</normaloff>icon/average.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>直方图规定化</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/maximum.png</normaloff>icon/maximum.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>旋转放缩</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/rotating-add.png</normaloff>icon/rotating-add.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>水平翻转</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/flip-horizontally.png</normaloff>icon/flip-horizontally.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>垂直翻转</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/flip-vertically.png</normaloff>icon/flip-vertically.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>空域平滑</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/chart-histogram.png</normaloff>icon/chart-histogram.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>频域平滑</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/chart-line.png</normaloff>icon/chart-line.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>锐化</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/triangle.png</normaloff>icon/triangle.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>加噪</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/acoustic.png</normaloff>icon/acoustic.png</iconset>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_5">
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+	background-color: rgb(0, 0, 0, 50);
+    border-radius: 20px;
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="CustomGraphicsView" name="graphicsView">
+            <property name="styleSheet">
+             <string notr="true">QFrame{
+    border-radius: 20px;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_4">
+         <property name="styleSheet">
+          <string notr="true">QFrame{
+	background-color: rgb(255, 255, 255, 150);
+    border-radius: 20px;
+}
+    
+
+
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QListWidget" name="listWidget1">
+            <property name="styleSheet">
+             <string notr="true">* {
+  outline:none;
+}
+QListView{
+  border-radius:20px;
+
+}
+QListView::item{
+  background-color:transparent;
+  padding-left:12px;
+  padding:12px;
+
+}
+QListView::item:hover{
+  background-color:rgba(216,216,216,50);
+
+}
+QListView::item:selected{
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+  border-left:2px solid rgb(90,216,212);
+
+}</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="uniformItemSizes">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>CustomGraphicsView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res_rc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>image_processing()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>396</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget1</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>image_display()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1665</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1796</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>image_processing()</slot>
+  <slot>image_display()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>输入自适应参数</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/1.svg</normaloff>icon/1.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {  
+        color: rgb(85,85,85); /* 设置标签文本颜色 */ 
+        font:12px \&quot;Microsoft YaHei\&quot;; 
+        font-weight:bold; 
+    }</string>
+       </property>
+       <property name="text">
+        <string>对比度限制：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_1">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {  
+    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */
+    padding-left:10px;
+    border-radius:3px; /* 设置输入框边框圆角 */  
+    color:rgb(105,105,105);
+    font:13px;
+    font-size: 12pt \&quot;Microsoft YaHei\&quot;; /* 设置字体大小 */  
+    padding: 4px; /* 设置内边距 */  
+}  
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+    color: #298DFF;
+    selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+QLineEdit:focus{
+    border:2px solid rgba(89, 217, 212, 50);
+}
+QLineEdit:disabled{
+    background-color:rgb(238,238,238);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>默认40.0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">QLabel {  
+        color: rgb(85,85,85); /* 设置标签文本颜色 */ 
+        font:12px \&quot;Microsoft YaHei\&quot;; 
+        font-weight:bold; 
+    }</string>
+       </property>
+       <property name="text">
+        <string>网格大小：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {  
+    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */
+    padding-left:10px;
+    border-radius:3px; /* 设置输入框边框圆角 */  
+    color:rgb(105,105,105);
+    font:13px;
+    font-size: 12pt \&quot;Microsoft YaHei\&quot;; /* 设置字体大小 */  
+    padding: 4px; /* 设置内边距 */  
+}  
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+    color: #298DFF;
+    selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+QLineEdit:focus{
+    border:2px solid rgba(89, 217, 212, 50);
+}
+QLineEdit:disabled{
+    background-color:rgb(238,238,238);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>默认8</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">QLabel {  
+        color: rgb(85,85,85); /* 设置标签文本颜色 */ 
+        font:12px \&quot;Microsoft YaHei\&quot;; 
+        font-weight:bold; 
+    }</string>
+       </property>
+       <property name="text">
+        <string>×</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {  
+    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */
+    padding-left:10px;
+    border-radius:3px; /* 设置输入框边框圆角 */  
+    color:rgb(105,105,105);
+    font:13px;
+    font-size: 12pt \&quot;Microsoft YaHei\&quot;; /* 设置字体大小 */  
+    padding: 4px; /* 设置内边距 */  
+}  
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+    color: #298DFF;
+    selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+QLineEdit:focus{
+    border:2px solid rgba(89, 217, 212, 50);
+}
+QLineEdit:disabled{
+    background-color:rgb(238,238,238);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>默认8</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgba(47, 125, 238, 90);
+        border-radius:3px; 
+        min-height:30px; 
+        min-width:60px; 
+        font:13px \&quot;Microsoft YaHei\&quot;;
+    }
+QPushButton:hover {
+        background-color:rgba(85, 255, 255, 50);
+    }
+QPushButton:pressed {
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+    }</string>
+       </property>
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: rgba(47, 125, 238, 90);
+        border-radius:3px; 
+        min-height:30px; 
+        min-width:60px; 
+        font:13px \&quot;Microsoft YaHei\&quot;;
+    }
+QPushButton:hover {
+        background-color:rgba(85, 255, 255, 50);
+    }
+QPushButton:pressed {
+  background-color:rgba(90,216,212,50);
+  color:rgb(40,92,90);
+    }</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>575</x>
+     <y>12</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

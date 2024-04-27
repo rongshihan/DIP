@@ -1,5 +1,5 @@
 ('D:\\DIP\\build\\dip\\dip.exe',
- True,
+ False,
  False,
  True,
  ['D:\\DIP\\icon\\2.ico'],
@@ -82,8 +82,8 @@
  [],
  False,
  False,
- 1713948018,
- [('run.exe',
-   'D:\\anaconda3\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
+ 1714123863,
+ [('runw.exe',
+   'D:\\anaconda3\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')],
  'D:\\anaconda3\\python311.dll')

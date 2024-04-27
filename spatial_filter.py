@@ -3,7 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def spatial_filter(img_path, method):
+def spatial_filter(img_path, ksize1, ksize2, method):
+    """
+
+    :param img_path:
+    :param ksize1:
+    :param ksize2:
+    :param method:
+    :return:
+    """
     # 设置matplotlib绘图时的中文显示问题
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
     plt.rcParams['axes.unicode_minus'] = False  # 处理负号问题
@@ -19,16 +27,16 @@ def spatial_filter(img_path, method):
     ax[0].axis('off')
 
     spa_image = None
-    if method == '领域平均法':
+    if method == '中值滤波':
+        # 应用中值滤波
+        # 这里的 5 是滤波器的大小，它必须是正奇数，比如 3, 5, 7 等
+        spa_image = cv2.medianBlur(image, ksize1)
+    elif method == '盒式滤波器':
         # 领域平均法 - 用cv2.blur函数实现
-        spa_image = cv2.blur(image, (5, 5))  # 5x5的内核
-    elif method == '阈值平均法':
-        # 阈值平均法 - OpenCV没有直接函数，可以设置一个阈值，只有当领域中的像素值相差不大时才进行平均
-        # 这里简单使用cv2.blur作为示例，实际应用中需要根据阈值自定义实现
-        spa_image = cv2.blur(image, (5, 5))  # 这里暂时还是普通的领域平均
-    elif method == '加权平均法':
+        spa_image = cv2.blur(image, (ksize1, ksize2))  # 5x5的内核
+    elif method == '高斯滤波器':
         # 加权平均法 - 使用高斯模糊，权重由高斯函数确定
-        spa_image = cv2.GaussianBlur(image, (5, 5), 0)  # 使用5x5高斯内核
+        spa_image = cv2.GaussianBlur(image, (ksize1, ksize2), 0)  # 使用5x5高斯内核
     elif method == '4-领域平均':
         # 4-领域平均 (使用自定义核)
         kernel_4_neighbour = np.array([[0, 1, 0],

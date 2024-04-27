@@ -14,14 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(800, 120)
+        Dialog.resize(800, 187)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("icon/1.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Dialog)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setSpacing(12)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setStyleSheet("QLabel {  \n"
@@ -103,6 +100,72 @@ class Ui_Dialog(object):
         icon7.addPixmap(QtGui.QPixmap("icon/all-application.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.comboBox.addItem(icon7, "")
         self.verticalLayout.addWidget(self.comboBox)
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setStyleSheet("QLabel {  \n"
+"        color: rgb(85,85,85); /* 设置标签文本颜色 */ \n"
+"        font:12px \\\"Microsoft YaHei\\\"; \n"
+"        font-weight:bold; \n"
+"    }")
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_2.setStyleSheet("QLineEdit {  \n"
+"    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */\n"
+"    padding-left:10px;\n"
+"    border-radius:3px; /* 设置输入框边框圆角 */  \n"
+"    color:rgb(105,105,105);\n"
+"    font:13px;\n"
+"    font-size: 12pt \\\"Microsoft YaHei\\\"; /* 设置字体大小 */  \n"
+"    padding: 4px; /* 设置内边距 */  \n"
+"}  \n"
+"QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */\n"
+"    border: 1px solid #298DFF;\n"
+"    border-radius: 3px;\n"
+"    background-color: #F2F2F2;\n"
+"    color: #298DFF;\n"
+"    selection-background-color: #298DFF;\n"
+"    selection-color: #F2F2F2;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"    border:2px solid rgba(89, 217, 212, 50);\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"    background-color:rgb(238,238,238);\n"
+"}")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_2.addWidget(self.lineEdit_2)
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_2.addWidget(self.label_3)
+        self.lineEdit_1 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_1.setStyleSheet("QLineEdit {  \n"
+"    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */\n"
+"    padding-left:10px;\n"
+"    border-radius:3px; /* 设置输入框边框圆角 */  \n"
+"    color:rgb(105,105,105);\n"
+"    font:13px;\n"
+"    font-size: 12pt \\\"Microsoft YaHei\\\"; /* 设置字体大小 */  \n"
+"    padding: 4px; /* 设置内边距 */  \n"
+"}  \n"
+"QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */\n"
+"    border: 1px solid #298DFF;\n"
+"    border-radius: 3px;\n"
+"    background-color: #F2F2F2;\n"
+"    color: #298DFF;\n"
+"    selection-background-color: #298DFF;\n"
+"    selection-color: #F2F2F2;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"    border:2px solid rgba(89, 217, 212, 50);\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"    background-color:rgb(238,238,238);\n"
+"}")
+        self.lineEdit_1.setObjectName("lineEdit_1")
+        self.horizontalLayout_2.addWidget(self.lineEdit_1)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButton = QtWidgets.QPushButton(Dialog)
@@ -140,23 +203,27 @@ class Ui_Dialog(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
         self.verticalLayout.addLayout(self.horizontalLayout)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
 
         self.retranslateUi(Dialog)
         self.pushButton.clicked.connect(Dialog.accept) # type: ignore
         self.pushButton_2.clicked.connect(Dialog.reject) # type: ignore
+        self.comboBox.currentIndexChanged['int'].connect(Dialog.on_combobox_current_index_changed) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "选择空域方法"))
         self.label.setText(_translate("Dialog", "请选择空域方法："))
-        self.comboBox.setItemText(0, _translate("Dialog", "领域平均法"))
-        self.comboBox.setItemText(1, _translate("Dialog", "阈值平均法"))
-        self.comboBox.setItemText(2, _translate("Dialog", "加权平均法"))
+        self.comboBox.setItemText(0, _translate("Dialog", "盒式滤波器"))
+        self.comboBox.setItemText(1, _translate("Dialog", "中值滤波"))
+        self.comboBox.setItemText(2, _translate("Dialog", "高斯滤波器"))
         self.comboBox.setItemText(3, _translate("Dialog", "4-领域平均"))
         self.comboBox.setItemText(4, _translate("Dialog", "8-领域平均"))
         self.comboBox.setItemText(5, _translate("Dialog", "4-领域加权平均"))
         self.comboBox.setItemText(6, _translate("Dialog", "8-领域加权平均"))
+        self.label_2.setText(_translate("Dialog", "滤波器大小："))
+        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "默认5"))
+        self.label_3.setText(_translate("Dialog", "×"))
+        self.lineEdit_1.setPlaceholderText(_translate("Dialog", "默认5"))
         self.pushButton.setText(_translate("Dialog", "确定"))
         self.pushButton_2.setText(_translate("Dialog", "取消"))

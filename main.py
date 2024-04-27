@@ -294,9 +294,24 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 # 显示子窗口
                 window.exec()
                 # 获得对话框的输入内容
-                text = window.comboBox.currentText()
+                text1 = window.comboBox.currentText()
+
+                text2 = window.lineEdit_1.text().strip()
+
+                if text2 == '':
+                    ksize1 = 5
+                else:
+                    ksize1 = int(text2)
+
+                text3 = window.lineEdit_2.text().strip()
+
+                if text3 == '':
+                    ksize2 = 5
+                else:
+                    ksize2 = int(text3)
+
                 # 空域滤波
-                spa_filter, fig = spatial_filter(img_path, text)
+                spa_filter, fig = spatial_filter(img_path, ksize1, ksize2, text1)
 
                 # plt转QImage
                 matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())

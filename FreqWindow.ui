@@ -116,15 +116,6 @@ QComboBox::down-arrow:on {
           <normaloff>icon/mosaic (3).png</normaloff>icon/mosaic (3).png</iconset>
         </property>
        </item>
-       <item>
-        <property name="text">
-         <string>中值滤波</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/mosaic.png</normaloff>icon/mosaic.png</iconset>
-        </property>
-       </item>
       </widget>
      </item>
      <item>

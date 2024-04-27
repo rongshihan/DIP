@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>120</height>
+    <height>187</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,30 +17,25 @@
    <iconset>
     <normaloff>icon/1.svg</normaloff>icon/1.svg</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>12</number>
-     </property>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">QLabel {  
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">QLabel {  
         color: rgb(85,85,85); /* 设置标签文本颜色 */ 
         font:12px \&quot;Microsoft YaHei\&quot;; 
         font-weight:bold; 
     }</string>
-       </property>
-       <property name="text">
-        <string>请选择空域方法：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBox">
-       <property name="styleSheet">
-        <string notr="true">QComboBox{
+     </property>
+     <property name="text">
+      <string>请选择空域方法：</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBox">
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
 
     font-size:14px \&quot;Microsoft YaHei\&quot;;
     padding: 1px 15px 1px 3px;
@@ -88,78 +83,167 @@ QComboBox::down-arrow:on {
     top: 1px;
     left: 1px;
 }</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>盒式滤波器</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (1).png</normaloff>icon/all-application (1).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>中值滤波</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (2).png</normaloff>icon/all-application (2).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>高斯滤波器</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (3).png</normaloff>icon/all-application (3).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4-领域平均</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (4).png</normaloff>icon/all-application (4).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8-领域平均</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (5).png</normaloff>icon/all-application (5).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4-领域加权平均</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application (6).png</normaloff>icon/all-application (6).png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8-领域加权平均</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/all-application.png</normaloff>icon/all-application.png</iconset>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">QLabel {  
+        color: rgb(85,85,85); /* 设置标签文本颜色 */ 
+        font:12px \&quot;Microsoft YaHei\&quot;; 
+        font-weight:bold; 
+    }</string>
+     </property>
+     <property name="text">
+      <string>滤波器大小：</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {  
+    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */
+    padding-left:10px;
+    border-radius:3px; /* 设置输入框边框圆角 */  
+    color:rgb(105,105,105);
+    font:13px;
+    font-size: 12pt \&quot;Microsoft YaHei\&quot;; /* 设置字体大小 */  
+    padding: 4px; /* 设置内边距 */  
+}  
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+    color: #298DFF;
+    selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+QLineEdit:focus{
+    border:2px solid rgba(89, 217, 212, 50);
+}
+QLineEdit:disabled{
+    background-color:rgb(238,238,238);
+}</string>
        </property>
-       <item>
-        <property name="text">
-         <string>领域平均法</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (1).png</normaloff>icon/all-application (1).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>阈值平均法</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (2).png</normaloff>icon/all-application (2).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>加权平均法</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (3).png</normaloff>icon/all-application (3).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4-领域平均</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (4).png</normaloff>icon/all-application (4).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>8-领域平均</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (5).png</normaloff>icon/all-application (5).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4-领域加权平均</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application (6).png</normaloff>icon/all-application (6).png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>8-领域加权平均</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>icon/all-application.png</normaloff>icon/all-application.png</iconset>
-        </property>
-       </item>
+       <property name="placeholderText">
+        <string>默认5</string>
+       </property>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="pushButton">
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>×</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_1">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {  
+    border:2px solid rgba(89, 217, 212, 50); /* 设置输入框边框 */
+    padding-left:10px;
+    border-radius:3px; /* 设置输入框边框圆角 */  
+    color:rgb(105,105,105);
+    font:13px;
+    font-size: 12pt \&quot;Microsoft YaHei\&quot;; /* 设置字体大小 */  
+    padding: 4px; /* 设置内边距 */  
+}  
+QLineEdit:hover { /* 鼠标悬浮在QLineEdit时的状态 */
+	border: 1px solid #298DFF;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+    color: #298DFF;
+    selection-background-color: #298DFF;
+	selection-color: #F2F2F2;
+}
+QLineEdit:focus{
+    border:2px solid rgba(89, 217, 212, 50);
+}
+QLineEdit:disabled{
+    background-color:rgb(238,238,238);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>默认5</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
 	background-color: rgba(47, 125, 238, 90);
         border-radius:3px; 
         min-height:30px; 
@@ -173,16 +257,16 @@ QPushButton:pressed {
   background-color:rgba(90,216,212,50);
   color:rgb(40,92,90);
     }</string>
-         </property>
-         <property name="text">
-          <string>确定</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
+       </property>
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
 	background-color: rgba(47, 125, 238, 90);
         border-radius:3px; 
         min-height:30px; 
@@ -196,13 +280,11 @@ QPushButton:pressed {
   background-color:rgba(90,216,212,50);
   color:rgb(40,92,90);
     }</string>
-         </property>
-         <property name="text">
-          <string>取消</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -217,8 +299,8 @@ QPushButton:pressed {
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>130</x>
-     <y>94</y>
+     <x>129</x>
+     <y>162</y>
     </hint>
     <hint type="destinationlabel">
      <x>41</x>
@@ -233,8 +315,8 @@ QPushButton:pressed {
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>266</x>
-     <y>99</y>
+     <x>669</x>
+     <y>176</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>
@@ -242,5 +324,24 @@ QPushButton:pressed {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_combobox_current_index_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>223</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>on_combobox_current_index_changed()</slot>
+ </slots>
 </ui>

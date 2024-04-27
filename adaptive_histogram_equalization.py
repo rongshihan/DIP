@@ -19,7 +19,7 @@ def adaptive_histogram_equalization(img_path, clip_limit, tile_grid_size):
     clahe = cv2.createCLAHE(clip_limit, tile_grid_size)
 
     # 读取图像
-    image = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), -1)
+    image = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), 0)
 
     # 绘制子图
     fig, ax = plt.subplots(1, 2, figsize=(15, 10))
@@ -41,4 +41,4 @@ def adaptive_histogram_equalization(img_path, clip_limit, tile_grid_size):
 
 if __name__ == "__main__":
     # 添加高斯噪声
-    adaptive_histogram_equalization('pout.tif', 25.0, (257, 257))
+    adaptive_histogram_equalization('2.tif', 25.0, (257, 257))

@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 
 def adaptive_histogram_equalization(img_path, clip_limit, tile_grid_size):
     """
-    :param img_path:
-    :param clip_limit: (对比度限制)：这是用来限制对比度的参数。
+    实现自适应直方图均衡化
+    :param img_path: 图片路径
+    :param clip_limit: (对比度限制)： 这是用来限制对比度的参数。
     其值越大，对比度的增加越明显，但可能会导致噪声放大。默认值通常是 40。
-    :param tile_grid_size: (网格大小)：这是将图像分割成的小块（或称为“tiles”）的大小。
+    :param tile_grid_size: (网格大小)： 这是将图像分割成的小块（或称为“tiles”）的大小。
     每个小块都会单独进行直方图均衡化。tileGridSize 是一个元组，例如 (8, 8)，表示图像被分割成 8x8 的小块。
     选择较大的网格大小会增加处理速度，但可能会降低局部对比度增强的效果；反之，选择较小的网格大小会增加局部对比度增强的效果，但可能会增加处理时间。
     :return:

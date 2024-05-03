@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 def spatial_filter(img_path, ksize1, ksize2, method):
     """
-
-    :param img_path:
-    :param ksize1:
-    :param ksize2:
-    :param method:
+    实现空域滤波
+    :param img_path: 图片路径
+    :param ksize1: 滤波器核大小
+    :param ksize2: 滤波器核大小
+    :param method: 空域滤波器名称
     :return:
     """
     # 设置matplotlib绘图时的中文显示问题
@@ -72,4 +72,4 @@ def spatial_filter(img_path, ksize1, ksize2, method):
 
 
 if __name__ == "__main__":
-    spatial_filter('pout.tif', '8-领域加权平均')
+    spatial_filter('pout.tif', 8, 8, '盒式滤波器')

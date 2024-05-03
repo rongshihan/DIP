@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def add_salt_and_pepper_noise(img_path, amount):
     """
     给图像添加椒盐噪声
-    :param img_path:
+    :param img_path: 图片路径
     :param amount: 表示噪声的比例
     :return:
     """

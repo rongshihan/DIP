@@ -7,7 +7,7 @@ from PyQt5.QtGui import QImage, QPixmap
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
 
-# 本类实现直方图
+# 本类实现直方图（opencv和pillow）以及matplotlib转QImage
 def histogram_cv(img_path):
     """
     用opencv画直方图
@@ -96,13 +96,11 @@ def matplotlib_to_qimage(fig):
     return QPixmap.fromImage(img)
 
 
-def plt_to_qimg(fig, height, width):
+def plt_to_qimg(fig):
     """
     直接操作matplotlib的渲染后端以获取图像数据而不保存到文件通常涉及到使用matplotlib的FigureCanvas类，
     这个类提供了将图形渲染到不同后端的接口。对于内存中的渲染，通常使用的是Agg后端（Anti-Grain Geometry），
     它是一个高质量的渲染器，可以生成PNG、SVG、PDF等格式的输出。
-    :param height:
-    :param width:
     :param fig:
     :return:
     """

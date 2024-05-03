@@ -4,6 +4,12 @@ import numpy as np
 
 
 def frequency_domain_filter(img_path, method):
+    """
+    实现频域滤波器
+    :param img_path: 图片路径
+    :param method: 滤波器名称
+    :return:
+    """
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体
     plt.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
     # 读取图像并转换为灰度
@@ -62,8 +68,6 @@ def frequency_domain_filter(img_path, method):
 
     # 归一化到0-255范围
     img_filter = (img_filter / np.max(img_filter) * 255).astype(np.uint8)
-
-    plt.show()
 
     return img_filter, fig
 

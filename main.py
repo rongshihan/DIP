@@ -134,7 +134,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 hist, fig = histogram_cv(img_path)
 
                 # plt转Qimage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -148,7 +148,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 equalized_image, fig = histogram_equalization(img_path)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -190,7 +190,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 image, fig = adaptive_histogram_equalization(img_path, clip_limit, (tile_grid_size1, tile_grid_size2))
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -215,7 +215,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 mat_img, fig = histogram_matching(org_img_path, ref_img_path)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -314,7 +314,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 spa_filter, fig = spatial_filter(img_path, ksize1, ksize2, text1)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -337,7 +337,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 fre_filter, fig = frequency_domain_filter(img_path, text)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -359,7 +359,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 sharpen_img, fig = sharpen(img_path, text)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 
@@ -406,7 +406,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                     add_noise_image, fig = add_gaussian_noise(img_path, mean, sigma)
 
                 # plt转QImage
-                matplotlib_to_qimage = plt_to_qimg(fig, self.graphicsView.height(), self.graphicsView.width())
+                matplotlib_to_qimage = plt_to_qimg(fig)
 
                 item = QGraphicsPixmapItem(matplotlib_to_qimage)
 

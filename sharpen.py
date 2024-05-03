@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 
 
 def sharpen(img_path, method):
+    """
+    实现锐化
+    :param img_path: 图片路径
+    :param method: 锐化方法名称
+    :return:
+    """
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体
     plt.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
     # 读取图像

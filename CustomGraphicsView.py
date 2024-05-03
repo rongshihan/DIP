@@ -3,7 +3,7 @@ from PyQt5.QtGui import QPixmap, QPainter
 from PyQt5.QtWidgets import QGraphicsScene, QGraphicsPixmapItem, QGraphicsView, QMenu, QAction, QFileDialog
 
 
-# 自定义QGraphicsView控件，实现拖拽读取图片
+# 自定义QGraphicsView控件，实现拖拽读取图片、右键保存图片
 class CustomGraphicsView(QGraphicsView):
     def __init__(self, parent=None):
         super(CustomGraphicsView, self).__init__(parent)

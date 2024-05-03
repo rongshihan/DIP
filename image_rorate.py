@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 from PyQt5.QtGui import QImage
 
 
+# 本类实现图像选择缩放和opencv转QImage
 def image_rotate(img_path, angle, scale):
     """
-    图像旋转
-    :param img_path:
+    实现图像旋转缩放
+    :param img_path: 图片路径
     :param angle: 旋转角度
     :param scale: 缩放因子（1.0表示不缩放）
     :return:
